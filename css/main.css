@@ -87,3 +87,23 @@ header {
     padding: 30px;
 }
 
+.offer {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offer h1 {
+    color: var(--third-color);
+}
+
+.fair, .local, .made {
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
