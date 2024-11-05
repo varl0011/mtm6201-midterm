@@ -8,6 +8,47 @@
 
 body {
     font-family: "Lato";
+    margin: 0;
+}
+
+/* Hero Section Start */
+.hero h1 {
+    font-weight: 800;
+    text-align: center;
+}
+
+.hero p {
+    text-align: center;
+    font-weight: 600;
+}
+
+.hero-btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero a {
+    font-weight: 800;
+    background-color: white;
+    color: #000000;
+    text-decoration: none;
+}
+
+.hero-child {
+    background-color: #00000070;
+    padding: 60px;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero Section End */
+
+
+.navbar a {
+    font-size: 1rem;
 }
 
 body h1{
@@ -36,14 +77,14 @@ header {
     font-family: "Lato";
     font-size: 1.15rem;
     font-weight: 800;
-    padding: 30px 0 20px 0;
+    padding: 20px;
+    min-height: 10vh;
 }
 
 .logotype {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
 }
 
 .navbar ul{
@@ -53,7 +94,7 @@ header {
     flex-direction: row;
     color: var(--primary-color);
     list-style:none;
-    margin-right: 30px;
+    padding: 0;
 }
 
 .navbar ul li a{
@@ -70,21 +111,19 @@ header {
     background-image: url(../images/hero-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px;
-    height: 400px;
+    background-position: center center;
+    min-height:50vh;
 }
 
+
 .banner-content {
-    margin: 100px 0 0 0;
-    width: 500px;
     color: var(--primary-color);
     font-weight: 2000;
 }
 
-.banner-content button {
+.banner-content a {
     border: 0px;
-    margin: 0 0 0 180px;
-    padding: 30px;
+    padding: 20px 30px;
 }
 
 .offer {
@@ -94,7 +133,7 @@ header {
     align-items: center;
 }
 
-.offer h1 {
+.offer p:nth-child(1) {
     color: var(--third-color);
 }
 
@@ -103,7 +142,17 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    max-width: 275px;
+}
+
+.local p{
+    text-align: left;
 }
 
 
 
+/* Feature Section */
+.feature-img {
+    max-width: 30%;
+}
