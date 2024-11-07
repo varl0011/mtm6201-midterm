@@ -128,8 +128,22 @@ header {
 
 
 .welcome {
+    padding-top: 10px;
     background-color: var(--background-color);
-    margin-top: 0;
+    min-height: 120vh;
+}
+
+.welcome p, .welcome h2 {
+    margin-left: 15px;
+    margin-block-start: 0;
+}
+.welcome h2 {
+    max-width: 80%;
+}
+.welcome p {
+    color: var(--third-color);
+    margin-block-end: 0;
+    margin-block-start: 70px;
 }
 
 .first-img {
@@ -181,10 +195,6 @@ header {
     grid-area: i5;
     background-image: url(../images/smiling-employee.jpeg);
     background-size: cover;
-}
-
-.welcome p {
-    margin: 0 auto;
 }
 
 .offer {
