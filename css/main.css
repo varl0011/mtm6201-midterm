@@ -114,11 +114,6 @@ header {
 }
 
 /* Hero Section End */
-
-.wrapper-width {
-    width: 1200px;
-}
-
 .banner {
     background-image: url(../images/hero-background.jpg);
     background-repeat: no-repeat;
@@ -611,6 +606,10 @@ header {
         align-items: center;
     }
 
+    .menu-btn {
+        margin-bottom: 0px;
+    }
+
     /* ABOUT US */
 
     .about-us {
@@ -811,8 +810,6 @@ header {
         margin-bottom: 50px;
     }
 
-    .about-us p {}
-
     .about-img {
         max-width: 35%;
         margin: 0;
@@ -855,7 +852,7 @@ header {
 
 
 
-/* Lets do some animatiooooooooooooons */
+/* Animations */
 .hero-head-one,
 .hero-head-two {
     display: block;
