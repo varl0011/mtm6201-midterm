@@ -648,16 +648,23 @@ header {
     .testim-imgs {
         display: flex;
         flex-direction: row;
-        max-width: 80%;
         margin: 0 auto;
     }
 
+    .testim-img {
+        min-height: 40vh;
+    }
+
     .testim-p, .testim h2 {
-        margin-left: 163px;
+        margin-left: 15px;
     }
 
     .testim h2 {
         max-width: 40% ;
+    }
+
+    .testimonial-text {
+        padding-bottom: 0px;
     }
 
 }
