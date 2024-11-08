@@ -65,11 +65,11 @@ header {
     text-decoration: none;
     color: var(--primary-color);
     margin: 0 30px 0 30px;
+    transition: 0.4s all ease-in-out;
 }
 
 .navbar ul li a:hover {
     color: var(--fourth-color);
-    transition: 0.4s ease;
 }
 
 /* Hero Section Start */
@@ -313,6 +313,7 @@ header {
     border: 3px solid var(--primary-color);
     padding: 10px 25px 10px 25px;
     font-weight: 800;
+    transition: 0.4s all ease-in-out;
     margin-bottom: 30px;
 }
 
@@ -328,12 +329,12 @@ header {
     color: var(--primary-color);
     padding: 10px 25px 10px 25px;
     border: 3px solid var(--primary-color);
+    transition: 0.4s all ease-in-out;
     font-weight: 800;
 }
 
 .locations-btn:hover {
     background-color: var(--primary-color);
-    transition: 0.4s;
     border: 3px solid var(--primary-color);
     color: var(--secondary-color);
 }
@@ -406,12 +407,14 @@ header {
     margin-top: 1rem;
     display: block;
     width: fit-content;
+    transition: 0.4s all ease-in-out;
 }
 
 .about-btn:hover {
     background-color: var(--fourth-color);
-    transition: 0.4s;
 }
+
+/*********** TESTIMONIALS ***********/
 
 .testim {
     background-color: var(--secondary-color);
@@ -426,8 +429,8 @@ header {
 }
 
 .testim h2,
-.testim p:nth-of-type(1) {
-    padding: 0 15px;
+.testim-p {
+    margin-left: 15px;
 }
 
 .testim-img {
@@ -437,8 +440,7 @@ header {
     flex-direction: column;
     justify-content: end;
     max-width: 93.5%;
-    padding: 15px 0%;
-    margin: 0 auto;
+    margin-left: 15px;
 }
 
 #jane {
@@ -460,8 +462,8 @@ header {
 }
 
 
-.testim p {
-    padding: 0 15px;
+.testim-imgs p {
+    margin-left: 15px;
 }
 
 .testim>p {
@@ -511,13 +513,165 @@ header {
     margin: auto;
 }
 
+@media (min-width: 768px) {
+    body h1 {
+        font-size: 2.986rem
+    }
+
+    body h2 {
+        font-size: 2.488rem;
+    }
+
+    body h3 {
+        font-size: 1.728rem;
+    }
+
+    body p {
+        font-size: 1rem;
+    }
+
+    .gallery-parent {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .welcome h2 {
+        max-width: 60%;
+    }
+
+    .welcome {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .static-image {
+        margin-bottom: 0;
+    }
+
+    .welcome {
+        padding: 0 50px;
+        padding-top: 70px;
+        min-height: 50vh;
+    }
+
+    .welcome-align p, .welcome-align h2{
+        margin-left: 0;
+    }
+
+    .offer {
+        min-height: 60vh;
+        padding-bottom: 60px;
+    }
+
+    .icons-align {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .icons-first-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .icons-sec-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .local p {
+        text-align: center;
+    }
+   
+    .offer h2 {
+        margin-block-end: 0px;
+    }
+
+    .explore-child,
+    .explore {
+        min-height: 50vh;
+    }
+
+    .menu p,
+    .locations p {
+        margin: 0 auto;
+    }
+
+    .explore-block {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ABOUT US */
+
+    .about-us {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        padding: 0;
+    }
+
+    .about-us-block {
+        max-width: 47%;
+        min-height: 10vh;
+    }
+
+    .about-us p:nth-child(4) {
+        margin-bottom: 50px;
+    }
+
+    .about-img {
+        max-width: 47%;
+        margin: 0;
+        min-height: 55vh;
+    }
+
+    /* TESTIMONIALS */
+
+    .testim {
+        padding: 0px 15px;
+        margin-left: 0;
+        padding-top: 60px;
+    }
+
+    .testim-imgs {
+        display: flex;
+        flex-direction: row;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .testim-p, .testim h2 {
+        margin-left: 163px;
+    }
+
+    .testim h2 {
+        max-width: 40% ;
+    }
+
+}
+
+
+
+
+
+
+
+
 
 
 @media (min-width: 1100px) {
-
-    .menu-btn {
-        margin-bottom: 0px;
-    }
 
     body h1 {
         font-size: 3.815rem;
@@ -588,6 +742,10 @@ header {
         padding-top: 50px;
     }
 
+    .welcome-align p, .welcome-align h2{
+        margin-left: 0;
+    }
+
     .offer {
         min-height: 85vh;
     }
@@ -623,6 +781,12 @@ header {
         align-items: center;
     }
 
+    .menu-btn {
+        margin-bottom: 0px;
+    }
+
+    /* ABOUT US */
+
     .about-us {
         display: flex;
         flex-direction: row;
@@ -654,6 +818,9 @@ header {
         gap: 20px;
     }
 
+
+    /* TESTIMONIALS */
+
     .testim {
         padding: 0px 15px;
         margin-left: 0;
@@ -667,6 +834,13 @@ header {
         margin: 0 auto;
     }
 
+    .testim-p, .testim h2 {
+        margin-left: 163px;
+    }
+
+    .testim h2 {
+        max-width: 40% ;
+    }
 
 }
 
