@@ -28,6 +28,20 @@ body p {
     font-family: "Karla";
 }
 
+.w-1200 {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.skip-links {
+    position: absolute;
+    transform: translateY(-500%);
+}
+
+.skip-links:focus {
+    transform: translateY(0);
+}
+
 button {
     font-family: "Karla";
 }
@@ -210,20 +224,22 @@ header {
     min-height: 170vh;
 }
 
-.offer p:nth-child(1) {
+.offer .w-1200 p:nth-child(1) {
     color: var(--third-color);
-    margin-block-end: 0;
-    margin-block-start: 75px;
+    margin: 0;
+    text-align: center;
 }
 
 .offer h2 {
-    margin-block-start: 0;
-    margin-block-end: 0;
+    margin: 0;
+    text-align: center;
 }
 
 .offer h3 {
-    margin-block-end: 0;
+    margin: 1rem 0 0 0;
 }
+
+
 
 .fair,
 .local,
@@ -244,6 +260,8 @@ header {
 .local p,
 .made p {
     max-width: 200%;
+    margin-top: .5rem;
+    text-align: center;
 }
 
 
@@ -268,8 +286,9 @@ header {
     min-height: 80vh;
 }
 
-.explore-block {
-    margin-top: 100px;
+.explore-child {
+    display: flex;
+    align-items: center;
 }
 
 .menu,
@@ -360,8 +379,12 @@ header {
 
 .about-us {
     background-color: var(--background-color);
-    min-height: 140vh;
-    padding-top: 40px;
+    padding: 80px 0;
+}
+
+.about-us img {
+    padding: 0 15px;
+    width: -webkit-fill-available;
 }
 
 .about-us p:nth-child(1) {
@@ -379,15 +402,6 @@ header {
     margin-left: 15px;
 }
 
-.about-img {
-    background-image: url(../images/about-us.jpeg);
-    background-size: cover;
-    background-position: center center;
-    min-height: 70vh;
-    width: 93.5%;
-    margin-block-start: 60px;
-    margin-left: 15px;
-}
 
 /* .about p:nth-child(4) {
     margin-block-end: 10px;
@@ -428,14 +442,13 @@ header {
     margin-left: 15px;
 }
 
+.testim-p {
+    color: var(--third-color);
+}
+
 .testim-img {
     background-size: cover;
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    max-width: 93.5%;
-    margin-left: 15px;
+    margin: 0 15px;
 }
 
 #jane {
@@ -456,13 +469,19 @@ header {
     padding-top: 75px;
 }
 
+.testim-overlay {
+    background-color: #00000070;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
 
 .testim-imgs p {
     margin-left: 15px;
 }
 
 .testim>p {
-    color: var(--third-color);
     margin-block-end: 0;
     margin-block-start: 0px;
 }
@@ -491,7 +510,7 @@ header {
 
 /* FOOTER */
 
-.copyright-info {
+footer {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     min-height: 10vh;
@@ -500,7 +519,7 @@ header {
     padding-top: 2rem;
 }
 
-.copyright-info hr {
+footer hr {
     margin: 0;
     width: 90%;
     text-align: center;
@@ -508,7 +527,8 @@ header {
     margin: auto;
 }
 
-@media (min-width: 768px) {
+
+@media (min-width: 768px) and (max-width: 1099px) {
     body h1 {
         font-size: 2.986rem
     }
@@ -551,13 +571,15 @@ header {
         min-height: 50vh;
     }
 
-    .welcome-align p, .welcome-align h2{
+    .welcome-align p,
+    .welcome-align h2 {
         margin-left: 0;
     }
 
     .offer {
         min-height: 60vh;
         padding-bottom: 60px;
+        padding-top: 60px;
     }
 
     .icons-align {
@@ -584,7 +606,7 @@ header {
     .local p {
         text-align: center;
     }
-   
+
     .offer h2 {
         margin-block-end: 0px;
     }
@@ -612,28 +634,32 @@ header {
 
     /* ABOUT US */
 
-    .about-us {
+
+
+    .about-us .w-1200 {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        min-height: 80vh;
-        padding: 0;
+        padding: 15px 0;
     }
 
-    .about-us-block {
-        max-width: 47%;
-        min-height: 10vh;
+    .about-us {
+        padding: 80px 15px;
     }
 
     .about-us p:nth-child(4) {
         margin-bottom: 50px;
     }
 
-    .about-img {
-        max-width: 47%;
-        margin: 0;
-        min-height: 55vh;
+
+    .about-us-block {
+        max-width: 50%;
+    }
+
+    .about-us img {
+        padding: 0px;
+        width: 100%;
     }
 
     /* TESTIMONIALS */
@@ -650,20 +676,24 @@ header {
         margin: 0 auto;
     }
 
-    .testim-img {
-        min-height: 40vh;
-    }
-
-    .testim-p, .testim h2 {
+    .testim-p,
+    .testim h2 {
         margin-left: 15px;
     }
 
     .testim h2 {
-        max-width: 40% ;
+        max-width: 40%;
     }
 
     .testimonial-text {
         padding-bottom: 0px;
+    }
+
+    
+
+    .testim-overlay, .testim-img {
+        min-height: 30vh;
+        margin: 0;
     }
 
 }
@@ -695,7 +725,7 @@ header {
         font-size: 1rem;
     }
 
-    header {
+    header .w-1200 {
         display: flex;
         align-items: center;
         padding-bottom: 0;
@@ -707,7 +737,7 @@ header {
     }
 
     .navbar {
-        margin-left: 400px;
+        margin-left: auto;
     }
 
     .banner-content h1 {
@@ -748,7 +778,8 @@ header {
         padding-top: 50px;
     }
 
-    .welcome-align p, .welcome-align h2{
+    .welcome-align p,
+    .welcome-align h2 {
         margin-left: 0;
     }
 
@@ -766,6 +797,15 @@ header {
 
     .local p {
         text-align: center;
+    }
+
+    .about-us-block {
+        max-width: 50%;
+    }
+
+    .about-us img {
+        padding: 0px;
+        width: 100%;
     }
 
     /* EXPLORE */
@@ -793,17 +833,13 @@ header {
 
     /* ABOUT US */
 
-    .about-us {
+    .about-us .w-1200 {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: stretch;
         min-height: 100vh;
         padding: 0;
-    }
-
-    .about-us-block {
-        max-width: 40%;
     }
 
     .about-us p:nth-child(4) {
@@ -811,9 +847,7 @@ header {
     }
 
     .about-img {
-        max-width: 35%;
         margin: 0;
-        min-height: 80vh;
     }
 
     .gallery-parent {
@@ -834,17 +868,17 @@ header {
     .testim-imgs {
         display: flex;
         flex-direction: row;
-        max-width: 80%;
         margin: 0 auto;
     }
 
-    .testim-p, .testim h2 {
-        margin-left: 163px;
+    .icons-first-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
     }
 
-    .testim h2 {
-        max-width: 40% ;
-    }
 
 }
 
